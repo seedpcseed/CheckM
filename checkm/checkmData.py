@@ -112,7 +112,8 @@ class DBManager(mm.ManifestManager):
         # check that the data root is legit
         manifestFile = os.path.join(self.config.values["dataRoot"], mm.__MANIFEST__)
         if not os.path.exists(self.config.values["dataRoot"]) or not os.path.exists(manifestFile):
-            self.config.values["dataRoot"] = ""
+            # self.config.values["dataRoot"] = ""
+            self.config.values["dataRoot"] = "databases/checkm"
 
         if self.config.values["dataRoot"] == "":
             # no data folder set.
