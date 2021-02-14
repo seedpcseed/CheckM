@@ -42,7 +42,7 @@ class DefaultValues():
 
     SEQ_CONCAT_CHAR = '&&'
 
-    CHECKM_DATA_DIR = __DBM.config.values["dataRoot"]
+    CHECKM_DATA_DIR = "databases/checkm"
     # CHECKM_DATA_DIR = __DBM.config.values["dataRoot"]
     PHYLO_HMM_MODELS = phyloHMMs = os.path.join(CHECKM_DATA_DIR, 'hmms', 'phylo.hmm')
     HMM_MODELS = os.path.join(CHECKM_DATA_DIR, 'hmms', 'checkm.hmm')
