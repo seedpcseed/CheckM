@@ -102,7 +102,7 @@ class DBManager(mm.ManifestManager):
         self.logger = logging.getLogger('timestamp')
         self.config = DBConfig()  # load inbuilt configuration
         self.type = self.config.values["manifestType"]
-        
+
         if set_path:
             self.setRoot(set_path)
 
@@ -117,13 +117,15 @@ class DBManager(mm.ManifestManager):
 
         if self.config.values["dataRoot"] == "":
             # no data folder set.
-            print ("It seems that the CheckM data folder has not been set yet or has been removed. Please run 'checkm data setRoot'.")
-            if not self.setRoot():
+            self.config.values["dataRoot"] = "databases/checkm"
+            print ("Made dataolder as databases/checkm")
+            # print ("It seems that the CheckM data folder has not been set yet or has been removed. Please run 'checkm data setRoot'.")
+            # if not self.setRoot():
                 print("Sorry, CheckM cannot run without a valid data folder.")
 
     def runAction(self, action):
         """Main entry point for the updating code"""
-        
+
         if action[0] == "setRoot":
             if len(action) > 1:
                 path = self.setRoot(path=action[1])
