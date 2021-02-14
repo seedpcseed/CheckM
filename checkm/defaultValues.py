@@ -43,6 +43,7 @@ class DefaultValues():
     SEQ_CONCAT_CHAR = '&&'
 
     CHECKM_DATA_DIR = __DBM.config.values["dataRoot"]
+    # CHECKM_DATA_DIR = __DBM.config.values["dataRoot"]
     PHYLO_HMM_MODELS = phyloHMMs = os.path.join(CHECKM_DATA_DIR, 'hmms', 'phylo.hmm')
     HMM_MODELS = os.path.join(CHECKM_DATA_DIR, 'hmms', 'checkm.hmm')
     PFAM_CLAN_FILE = os.path.join(CHECKM_DATA_DIR, 'pfam', 'Pfam-A.hmm.dat')
