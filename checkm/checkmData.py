@@ -121,7 +121,7 @@ class DBManager(mm.ManifestManager):
             print ("Made dataolder as databases/checkm")
             # print ("It seems that the CheckM data folder has not been set yet or has been removed. Please run 'checkm data setRoot'.")
             # if not self.setRoot():
-                print("Sorry, CheckM cannot run without a valid data folder.")
+            print("Sorry, CheckM cannot run without a valid data folder.")
 
     def runAction(self, action):
         """Main entry point for the updating code"""
